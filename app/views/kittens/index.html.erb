@@ -1,0 +1,4 @@
+<br><br>
+<% @kittens.each do |kitten| %>
+  <%= link_to kitten.name, edit_kitten_path(kitten) %>
+<% end %>

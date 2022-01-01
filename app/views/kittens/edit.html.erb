@@ -1,0 +1,21 @@
+<%= form_for :kittens, url: kitten_path, method: 'patch' do |f| %>
+  <p>
+    <%= f.label "kitten name" %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label "kitten age" %>
+    <%= f.number_field :age %>
+  </p>
+  <p>
+    <%= f.label "kitten softness" %>
+    <%= f.number_field :softness, step: :any %>
+  </p>
+  <p>
+    <%= f.label "kitten cuteness" %>
+    <%= f.number_field :cuteness, step: :any %>
+  </p>
+  <p>
+    <%= f.submit "Save Kitten" %>
+  </p>
+<% end %>
