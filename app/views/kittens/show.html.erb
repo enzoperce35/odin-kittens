@@ -1,2 +1,13 @@
-<h1>Kittens#show</h1>
-<p>Find me in app/views/kittens/show.html.erb</p>
+<h3><%= @kitten.name %></h3>
+<p>
+  age: <%= @kitten.age %>  
+</p>
+<p>
+  softness: <%= @kitten.softness %>  
+</p>
+<p>
+  cuteness: <%= @kitten.cuteness %>  
+</p>
+
+<%= link_to 'edit kitten?', edit_kitten_path(@kitten) %>
+<%= link_to 'delete kitten?', kitten_path(@kitten), method: 'delete', data: {confirm: 'are you sure?'} %>

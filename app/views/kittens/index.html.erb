@@ -1,4 +1,5 @@
 <br><br>
 <% @kittens.each do |kitten| %>
-  <%= link_to kitten.name, edit_kitten_path(kitten) %>
+  <%= link_to kitten.name, kitten_path(kitten), method: 'get' %>
+  <%= link_to 'delete kitten?', kitten_path(kitten), method: 'delete', data: {confirm: 'are you sure?'} %><br>
 <% end %>

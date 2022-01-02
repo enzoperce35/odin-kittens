@@ -19,3 +19,5 @@
     <%= f.submit "Save Kitten" %>
   </p>
 <% end %>
+
+<%= link_to 'delete kitten?', kitten_path(@kitten), method: 'delete', data: {confirm: 'are you sure?'} %>
